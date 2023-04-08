@@ -1,13 +1,26 @@
+window.addEventListener("load",()=>
+{
+
+  
 const canvas = document.querySelector(".canvas");
+const btext3 = document.querySelector(".ball-text");
+
 const btext = document.querySelector(".ball-text1");
+
 const btext2 = document.querySelector(".ball-text2");
+btext.style.opacity = 0;
+btext2.style.opacity = 0;
+btext.style.opacity = 0;
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
+
 
 const context = canvas.getContext("2d");
 const frameCount = 120;
 
 const currentFrame = (index) => `./s/${(index + 1).toString()}.png`;
+
+
 
 const images = [];
 let ball = { frame: 0 };
@@ -176,3 +189,6 @@ btext2.textContent = sentences[i];
     i =0;
   }
 }, 1000);
+
+
+})
